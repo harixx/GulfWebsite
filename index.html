@@ -1,9 +1,11 @@
 <!DOCTYPE html>
-<html lang="en" class="scroll-smooth">
+<html lang="en" class="scroll-smooth scroll-pt-24">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gulf Hunar Rozgar Academy | Strategic Trade Training</title>
+    
+    <!-- SEO -->
+    <title>Gulf Hunar Rozgar Academy | Certified Trade Training</title>
     
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
@@ -34,7 +36,7 @@
                         serif: ['Playfair Display', 'serif'],
                     },
                     animation: {
-                        'infinite-scroll': 'infinite-scroll 50s linear infinite',
+                        'infinite-scroll': 'infinite-scroll 80s linear infinite',
                     },
                     keyframes: {
                         'infinite-scroll': {
@@ -47,6 +49,10 @@
         }
     </script>
     <style>
+        ::selection {
+            background-color: #D4AF37;
+            color: #020617;
+        }
         .glass {
             background: rgba(255, 255, 255, 0.03);
             backdrop-filter: blur(10px);
@@ -61,13 +67,14 @@
             mask-image: linear-gradient(to right, transparent, black 5%, black 95%, transparent);
             -webkit-mask-image: linear-gradient(to right, transparent, black 5%, black 95%, transparent);
         }
-        /* Logo Styling */
         .partner-logo {
-            height: 3.5rem; /* h-14 */
+            height: 4rem; /* h-16 equivalent */
             width: auto;
             object-fit: contain;
             filter: brightness(0) invert(1) opacity(0.6);
             transition: all 0.3s ease;
+            /* CRITICAL FIX: Prevent images from shrinking */
+            flex-shrink: 0; 
         }
         .partner-logo:hover {
             filter: brightness(1) invert(0) opacity(1);
@@ -75,7 +82,7 @@
         }
     </style>
 </head>
-<body class="bg-navy-950 text-gray-300 antialiased">
+<body class="bg-navy-950 text-gray-300 antialiased selection:bg-gold-400 selection:text-navy-950">
 
     <!-- Navbar -->
     <nav class="fixed w-full z-50 glass border-b border-white/5 bg-navy-950/80">
@@ -131,53 +138,22 @@
         </div>
     </header>
 
-    <!-- LOGO MARQUEE -->
-    <section id="partners" class="py-12 bg-navy-900 border-y border-white/5 overflow-hidden">
-        <div class="max-w-7xl mx-auto px-6 mb-8 text-center">
+    <!-- LOGO MARQUEE (FIXED SPACING) -->
+    <section id="partners" class="py-16 bg-navy-900 border-y border-white/5 overflow-hidden">
+        <div class="max-w-7xl mx-auto px-6 mb-12 text-center">
             <p class="text-gold-400 text-xs font-bold uppercase tracking-[0.2em]">Authorized Deployment Network</p>
         </div>
 
+        <!-- Added shrink-0 to prevent collapsing -->
         <div class="relative flex overflow-x-hidden mask-linear-fade">
             <!-- Strip 1 -->
-            <div class="flex animate-infinite-scroll whitespace-nowrap gap-16 pr-16 items-center">
-                <img src="1.png" alt="1" class="partner-logo">
-                <img src="2.png" alt="2" class="partner-logo">
-                <img src="3.png" alt="3" class="partner-logo">
-                <img src="4.png" alt="4" class="partner-logo">
-                <img src="5.png" alt="5" class="partner-logo">
-                <img src="6.png" alt="6" class="partner-logo">
-                <img src="7.png" alt="7" class="partner-logo">
-                <img src="8.png" alt="8" class="partner-logo">
-                <img src="9.png" alt="9" class="partner-logo">
-                <img src="10.png" alt="10" class="partner-logo">
-                <img src="11.png" alt="11" class="partner-logo">
-                <img src="12.png" alt="12" class="partner-logo">
-                <img src="13.png" alt="13" class="partner-logo">
-                <img src="14.png" alt="14" class="partner-logo">
-                <img src="15.png" alt="15" class="partner-logo">
-                <img src="16.png" alt="16" class="partner-logo">
-                <img src="17.png" alt="17" class="partner-logo">
+            <div class="flex animate-infinite-scroll whitespace-nowrap gap-48 pr-48 items-center shrink-0">
+                <img src="1.png" alt="1" class="partner-logo"><img src="2.png" alt="2" class="partner-logo"><img src="3.png" alt="3" class="partner-logo"><img src="4.png" alt="4" class="partner-logo"><img src="5.png" alt="5" class="partner-logo"><img src="6.png" alt="6" class="partner-logo"><img src="7.png" alt="7" class="partner-logo"><img src="8.png" alt="8" class="partner-logo"><img src="9.png" alt="9" class="partner-logo"><img src="10.png" alt="10" class="partner-logo"><img src="11.png" alt="11" class="partner-logo"><img src="12.png" alt="12" class="partner-logo"><img src="13.png" alt="13" class="partner-logo"><img src="14.png" alt="14" class="partner-logo"><img src="15.png" alt="15" class="partner-logo"><img src="16.png" alt="16" class="partner-logo"><img src="17.png" alt="17" class="partner-logo">
             </div>
 
             <!-- Strip 2 (Clone) -->
-            <div class="flex animate-infinite-scroll whitespace-nowrap gap-16 pr-16 items-center" aria-hidden="true">
-                <img src="1.png" alt="1" class="partner-logo">
-                <img src="2.png" alt="2" class="partner-logo">
-                <img src="3.png" alt="3" class="partner-logo">
-                <img src="4.png" alt="4" class="partner-logo">
-                <img src="5.png" alt="5" class="partner-logo">
-                <img src="6.png" alt="6" class="partner-logo">
-                <img src="7.png" alt="7" class="partner-logo">
-                <img src="8.png" alt="8" class="partner-logo">
-                <img src="9.png" alt="9" class="partner-logo">
-                <img src="10.png" alt="10" class="partner-logo">
-                <img src="11.png" alt="11" class="partner-logo">
-                <img src="12.png" alt="12" class="partner-logo">
-                <img src="13.png" alt="13" class="partner-logo">
-                <img src="14.png" alt="14" class="partner-logo">
-                <img src="15.png" alt="15" class="partner-logo">
-                <img src="16.png" alt="16" class="partner-logo">
-                <img src="17.png" alt="17" class="partner-logo">
+            <div class="flex animate-infinite-scroll whitespace-nowrap gap-48 pr-48 items-center shrink-0" aria-hidden="true">
+                <img src="1.png" alt="1" class="partner-logo"><img src="2.png" alt="2" class="partner-logo"><img src="3.png" alt="3" class="partner-logo"><img src="4.png" alt="4" class="partner-logo"><img src="5.png" alt="5" class="partner-logo"><img src="6.png" alt="6" class="partner-logo"><img src="7.png" alt="7" class="partner-logo"><img src="8.png" alt="8" class="partner-logo"><img src="9.png" alt="9" class="partner-logo"><img src="10.png" alt="10" class="partner-logo"><img src="11.png" alt="11" class="partner-logo"><img src="12.png" alt="12" class="partner-logo"><img src="13.png" alt="13" class="partner-logo"><img src="14.png" alt="14" class="partner-logo"><img src="15.png" alt="15" class="partner-logo"><img src="16.png" alt="16" class="partner-logo"><img src="17.png" alt="17" class="partner-logo">
             </div>
         </div>
     </section>
@@ -227,7 +203,7 @@
         </div>
     </section>
 
-    <!-- ACTIVE DEPLOYMENT LINES -->
+    <!-- ACTIVE DEPLOYMENT LINES (Full Flag Colors) -->
     <section class="py-12 bg-navy-900 border-t border-white/5 relative overflow-hidden">
         <div class="absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[500px] bg-gold-400/5 blur-[120px] pointer-events-none"></div>
 
@@ -487,7 +463,7 @@
                 
                 <h2 class="text-4xl md:text-5xl font-serif text-white font-bold mb-6">Start Your Career</h2>
                 <p class="text-gray-400 text-lg mb-10 max-w-lg mx-auto">
-                    Online Batches available for both Morning & Evening
+                    Online Batches available for both morning & evening
                 </p>
                 
                 <a href="https://wa.me/971503776572" class="inline-flex items-center gap-3 bg-gradient-to-r from-green-600 to-green-500 hover:from-green-500 hover:to-green-400 text-white px-10 py-5 rounded-full font-bold text-lg transition-all transform hover:scale-105 shadow-[0_0_40px_rgba(34,197,94,0.4)]">
